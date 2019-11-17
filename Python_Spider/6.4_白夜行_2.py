@@ -14,11 +14,11 @@ content_list = []
 
 while client_1.llen('url_quene') > 0:
 	url = client_1.lpop('url_quene')
-	source = requests.get(url).content.decode('utf-8')
+	source = requests.get(url).content
 	# source = "\'\'\'" + "\n" + source + "\n" + "\'\'\'"
-	print(source)
+	# print(source)
 	selector = lxml.html.fromstring(source)
-	chapter_name = selector.xpath('//div[@class="hltitle"]/text()')
+	chapter_name = selector.xpath('//div[@class="hltitle"]/hl/text()')
 	t = chapter_name
 	print(t)
 	

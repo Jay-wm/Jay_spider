@@ -15,4 +15,5 @@ url_list = selector.xpath('//div[@class="book_list"]/ul/li/a/@href')
 
 for url in url_list:
 	client_1.lpush('url_quene', url)
+	print(url)
 	
