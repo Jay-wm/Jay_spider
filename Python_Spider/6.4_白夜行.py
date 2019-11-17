@@ -4,20 +4,20 @@ import redis
 from pymongo import MongoClient
 
 
-connection = MongoClient()
-db = connection.Fiction
+client_1 = MongoClient()
+db = client_1.Fiction
 dbc = db.book
 
-client = redis.StrictRedis(host = '127.0.0.1', port = 6379)
+client_2 = redis.StrictRedis()
 selector = lxml.html.fromstring('http://dongyeguiwu.zuopinj.com/5525/')
 url_list = selector.xpath('//div[@class="book_list"]/ul/li/a/@href')
 
 for url in url_list:
-	client.rpush('url_quene', url)
+	client_2.lpush('url_quene', url)
 
 content_list = []
-while client.llen('url_quene') > 0:
-	url = client.lpop('url_quene').docode()
+while client_2.llen('url_quene') > 0:
+	url = client_2.lpop('url_quene').docode()
 	source = requests.get(url).content
 	selector = html.fromstring(source)
 	chapter_name = selector.xpath('//div[@class="hltitle]/hl/text()"')[0]
