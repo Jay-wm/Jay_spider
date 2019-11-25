@@ -28,8 +28,19 @@ import re
 # print(html_dict)
 
 # 7.1.4.2
-url = 'http://exercise.kingname.info/exercise_ajax_2.html'
-html = requests.get(url).content.decode()
-code_json = re.search("secret = '(.*?)'", html, re.S).group(1)
-code_dict = json.loads(code_json)
-print(code_dict['code'])
+# url = 'http://exercise.kingname.info/exercise_ajax_2.html'
+# html = requests.get(url).content.decode()
+# code_json = re.search("secret = '(.*?)'", html, re.S).group(1)
+# code_dict = json.loads(code_json)
+# print(code_dict['code'])
+
+# 7.1.5.1
+# json = {"name": "xx"', "age": "24", "secret1" = "123", secret2 = "456"}
+url1 = 'http://http://exercise.kingname.info/exercise_ajax_3.html'
+url2 = 'http://exercise.kingname.info/ajax_3_postbackend'
+json1 = requests.get(url1).content.decode()
+secret2 =
+html1 = requests.post(url, json= {"name": "xx", "age": "24", "secret1": "123", "secret2": "456"})
+html2 = requests.post(url, json= {"name": "xx", "age": "24"})
+print(json.loads(html1.content.decode()))
+print(json.loads(html2.content.decode()))
