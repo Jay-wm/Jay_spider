@@ -35,12 +35,23 @@ import re
 # print(code_dict['code'])
 
 # 7.1.5.1
-# json = {"name": "xx"', "age": "24", "secret1" = "123", secret2 = "456"}
-url1 = 'http://http://exercise.kingname.info/exercise_ajax_3.html'
-url2 = 'http://exercise.kingname.info/ajax_3_postbackend'
-json1 = requests.get(url1).content.decode()
-secret2 =
-html1 = requests.post(url, json= {"name": "xx", "age": "24", "secret1": "123", "secret2": "456"})
-html2 = requests.post(url, json= {"name": "xx", "age": "24"})
-print(json.loads(html1.content.decode()))
-print(json.loads(html2.content.decode()))
+# the html
+url = 'http://exercise.kingname.info/exercise_ajax_3.html'
+first_ajax_url = 'http://exercise.kingname.info/ajax_3_backend'
+secend_ajax_url = 'http://exercise.kingname.info/ajax_3_postbackend'
+
+page_html = requests.get(url).content.decode()
+secret_2 = re.search("secret_2 = (.*?)'", page_html).group(1)
+
+ajax_1_json = requests.get(first_ajax_url).content.decode()
+ajax_1_dict = json.loads(ajax_1_json)
+secret_1 = ajax_1_dict['code']
+
+ajax_2_json = requests.post(secend_ajax_url, json = {
+    'name': '青南',
+    'age': '24',
+    'secret1': 'secret_1',
+    'secret2': 'secret_2'}).content.decode()
+ajax_2_dict = json.loads(ajax_2_json)
+code=ajax_2_dict['code']
+print(f'{code}')
