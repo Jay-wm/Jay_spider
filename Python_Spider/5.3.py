@@ -1,20 +1,21 @@
+# -*- coding:utf-8 -*-
 html_data1 ='''
 <html>
     <head>
-    <title>测试</title>
+    <title>锟斤拷锟斤拷</title>
     </head>
     <body>
         <div class="useful">
             <ul>
-                <li class="info">我需要的信息1</li>
-                <li class="info">我需要的信息2</li>
-                <li class="info">我需要的信息3</li>
+                <li class="info">锟斤拷锟斤拷要锟斤拷锟斤拷息1</li>
+                <li class="info">锟斤拷锟斤拷要锟斤拷锟斤拷息2</li>
+                <li class="info">锟斤拷锟斤拷要锟斤拷锟斤拷息3</li>
             </ul>       
         </div>
         <div class="useless">
             <ul>
-                <li class="info">垃圾1</li>
-                <li class="info">垃圾2</li>
+                <li class="info">锟斤拷锟斤拷1</li>
+                <li class="info">锟斤拷锟斤拷2</li>
             </ul>
         </div>
     </body>
