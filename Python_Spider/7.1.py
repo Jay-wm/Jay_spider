@@ -41,17 +41,18 @@ first_ajax_url = 'http://exercise.kingname.info/ajax_3_backend'
 secend_ajax_url = 'http://exercise.kingname.info/ajax_3_postbackend'
 
 page_html = requests.get(url).content.decode()
-secret_2 = re.search("secret_2 = (.*?)'", page_html).group(1)
+secret_2 = re.search("secret_2 = '(.*?)'", page_html).group(1)
 
 ajax_1_json = requests.get(first_ajax_url).content.decode()
 ajax_1_dict = json.loads(ajax_1_json)
 secret_1 = ajax_1_dict['code']
 
 ajax_2_json = requests.post(secend_ajax_url, json = {
-    'name': '青南',
-    'age': '24',
-    'secret1': 'secret_1',
-    'secret2': 'secret_2'}).content.decode()
+    'name': "青南",
+    'age': 24,
+    'secret1': secret_1,
+    'secret2': secret_2}).content.decode()
 ajax_2_dict = json.loads(ajax_2_json)
-code=ajax_2_dict['code']
-print(f'{code}')
+code = ajax_2_dict['code']
+
+print(f'最终页面显示的内容：{code}')
