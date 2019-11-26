@@ -54,5 +54,4 @@ ajax_2_json = requests.post(secend_ajax_url, json = {
     'secret2': secret_2}).content.decode()
 ajax_2_dict = json.loads(ajax_2_json)
 code = ajax_2_dict['code']
-
 print(f'最终页面显示的内容：{code}')
