@@ -10,6 +10,8 @@ driver = webdriver.Chrome(r'C:\Users\Administrator.DESKTOP-74UB6TU\PycharmProjec
 
 # Open the web
 driver.get('http://exercise.kingname.info/exercise_advanced_ajax.html')
+
+
 try:
     # two are accessible
     # WebDriverWait(driver, 30).until(EC.presence_of_all_elements_located((By.CLASS_NAME, "content")))
@@ -33,3 +35,4 @@ element3 = driver.find_element_by_xpath("//input[@id = 'passwd-id]")
 
 # 返回结果列表
 element_list3 = driver.find_elements_by_xpath("//input[@id = 'passwd-id]")
+
