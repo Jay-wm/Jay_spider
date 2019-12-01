@@ -17,7 +17,7 @@ for each_reply in every_reply:
     result_list.append(result)
 
 
-with open('tieba_data2.csv', 'w', encoding = 'UTF-8') as f:
+with open('tieba_data.csv', 'w', encoding = 'UTF-8') as f:
     writer = csv.DictWriter(f, fieldnames = ['username', 'content', 'image', 'reply_time'])
     writer.writeheader()
     writer.writerows(result_list)
