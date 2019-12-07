@@ -14,6 +14,9 @@ import time
 driver = webdriver.Chrome(r'C:\Users\Administrator.DESKTOP-74UB6TU\PycharmProjects\Jay_spider\Python_Spider\chromedriver.exe')
 driver.get("https://www.zhihu.com/signin?next=%2F")
 
+# 切换登陆方式
+# cd = driver.find_element_by_xpath()
+
 # 找到用户名输入框
 elem = driver.find_element_by_name("username")
 elem.clear()
