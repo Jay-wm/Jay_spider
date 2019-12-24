@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'baidu.pipelines.BaiduPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'baidu.pipelines.BaiduPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +88,9 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+MONGODB_HOST = '127.0.0.1'
+MONGODB_PORT = '2707'
+MONGODB_DBNAME = 'exercise'
+MONGODB_DCNAME = 'person_info'
