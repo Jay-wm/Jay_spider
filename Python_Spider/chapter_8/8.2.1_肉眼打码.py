@@ -10,7 +10,7 @@ selector = lxml.html.fromstring(html)
 captcha_html = selector.xpath('//img/@src')[0]
 
 image = requests.get('http://exercise.kingname.info/'+ captcha_html).content
-with open('captcha.png', 'wb') as f:
+with open('../chapter_10/captcha.png', 'wb') as f:
     f.write(image)
 
 captcha = input('请查看captcha.png文件，并输入')

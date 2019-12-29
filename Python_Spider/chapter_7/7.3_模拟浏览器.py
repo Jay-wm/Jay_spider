@@ -5,8 +5,7 @@ from selenium.webdriver.common.by import By
 from  selenium.webdriver.support import expected_conditions as EC
 
 # Initializing
-driver = webdriver.Chrome(r'C:\Users\Administrator.DESKTOP-74UB6TU\PycharmProjects\Jay_spider\Python_Spider'
-                          r'\chromedriver.exe')
+driver = webdriver.Chrome(r'/Python_Spider/chromedriver.exe')
 
 # Open the web
 driver.get('http://exercise.kingname.info/exercise_advanced_ajax.html')

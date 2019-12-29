@@ -8,7 +8,7 @@ from selenium import webdriver
 # html_dict = json.loads(html_json)
 
 # Initializing
-driver = webdriver.Chrome(r'C:\Users\Administrator.DESKTOP-74UB6TU\PycharmProjects\Jay_spider\Python_Spider\chromedriver.exe')
+driver = webdriver.Chrome(r'/Python_Spider/chromedriver.exe')
 
 # Open the web
 driver.get('http://exercise.kingname.info/exercise_advanced_ajax.html')

@@ -11,7 +11,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 # 初始化Chromedriver
-driver = webdriver.Chrome(r'C:\Users\Administrator.DESKTOP-74UB6TU\PycharmProjects\Jay_spider\Python_Spider\chromedriver.exe')
+driver = webdriver.Chrome(r'/Python_Spider/chromedriver.exe')
 driver.get("https://www.zhihu.com/signin?next=%2F")
 
 # 切换登陆方式

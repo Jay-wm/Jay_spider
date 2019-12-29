@@ -21,7 +21,7 @@ def get_article(html):
 
 def save(chapter, article):
     os.makedirs('动物农场', exist_ok = True)
-    with open(os.path.join('动物农场', chapter+'.txt'), 'w', encoding = 'utf-8') as f:
+    with open(os.path.join('动物农场', chapter + '.txt'), 'w', encoding ='utf-8') as f:
         f.write(article)
 
 # 首先得到小说目录页源代码
