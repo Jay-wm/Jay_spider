@@ -97,9 +97,9 @@ DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 
 # Three scheduling algorithm（三种调度算法）
 '''1: Queue，the default scheduling algorithm'''
-SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderQueue'
+# SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderQueue'
 '''2: Stack（栈）'''
-SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderStack'
+# SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderStack'
 '''3: Priority Queue'''
 SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
 
@@ -109,8 +109,21 @@ SCHEDULER_PERDIDT = True
 
 MONGODB_HOST = '127.0.0.1'
 MONGODB_PORT = 27017
-MONGODB_DBNAME = 'exercise_11_4'
-MONGODB_DOCNAME = 'person_info'
+MONGODB_DBNAME = 'exercise_11_5'
+MONGODB_DOCNAME = 'blog'
 
 REDIS_HOST = '127.0.0.1'
 REDIS_PORT = 6379
+
+HEADERS = {
+    'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Accept-Language': 'zh-CN,zh;q=0.9',
+    'cach-control': 'max-age=0',
+    'Connection': 'keep-alive',
+    'Cookie': '__cfduid=de224b8ae0b4c97ca610745fd749648c61573977679',
+    'dnt': '1',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' \
+                 'Chrome/79.0.3945.88 Safari/537.36'
+}

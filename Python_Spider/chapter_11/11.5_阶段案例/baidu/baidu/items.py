@@ -22,3 +22,11 @@ class PersonInfoItem(scrapy.Item):
     age = scrapy.Field()
     salary = scrapy.Field()
     phone = scrapy.Field()
+
+
+class BlogItem(scrapy.Item):
+    title = scrapy.Field()
+    url = scrapy.Field()
+    post_time = scrapy.Field()
+    categorry = scrapy.Field()
+    detail = scrapy.Field()
